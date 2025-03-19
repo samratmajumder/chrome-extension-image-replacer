@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ankit's Image Replacer</title>
+    <style>
+      body {
+        width: 300px;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+      .options {
+        margin-bottom: 15px;
+      }
+      .image-options {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+      .dummy-image {
+        width: 80px;
+        height: 60px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        object-fit: cover;
+      }
+      .dummy-image.selected {
+        border-color: #1a73e8;
+      }
+      .action-buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+      button {
+        padding: 8px 16px;
+        background-color: #1a73e8;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0d62cb;
+      }
+      .status {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #5f6368;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image Replacer</h1>
+
+    <div class="options">
+      <p>Select a dummy image:</p>
+      <div class="image-options">
+        <img
+          id="dummy1"
+          class="dummy-image selected"
+          src="images/dummy1.jpg"
+          alt="Dummy Image 1"
+        />
+        <img
+          id="dummy2"
+          class="dummy-image"
+          src="images/dummy2.jpg"
+          alt="Dummy Image 2"
+        />
+        <img
+          id="dummy3"
+          class="dummy-image"
+          src="images/dummy3.jpg"
+          alt="Dummy Image 3"
+        />
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button id="replaceSingle">Replace Single Image</button>
+      <button id="replaceAll">Replace All Images</button>
+    </div>
+
+    <div class="status" id="status"></div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
